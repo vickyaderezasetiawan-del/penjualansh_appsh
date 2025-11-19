@@ -1,0 +1,30 @@
+:root{--container:1100px;--accent:#ff7a18;--muted:#6b7280}
+*{box-sizing:border-box}
+body{margin:0;color:#222;background:#f7f7f8;font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,Arial;padding-top:56px}
+.container{max-width:var(--container);margin:0 auto;padding:1rem}
+.site-header{background:#fff;border-bottom:1px solid #e6e6e6}
+.site-header .container{display:flex;align-items:center;justify-content:space-between}
+.brand a{color:var(--accent);text-decoration:none;font-weight:700}
+.main-nav a{margin-left:1rem;color:#333;text-decoration:none}
+.hero{padding:2rem 0;text-align:center}
+.product-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem}
+.product-card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 6px 20px rgba(48,63,159,0.06);transition:transform .28s ease,box-shadow .28s ease;border:1px solid rgba(0,0,0,0.04);display:flex;flex-direction:column;height:100%}
+.product-card:hover{transform:translateY(-6px);box-shadow:0 12px 28px rgba(59,53,93,0.08)}
+.product-image,.product-img{width:100%;height:200px;object-fit:cover;display:block}
+.product-body{padding:0.9rem 1rem;display:flex;flex-direction:column;flex:1}
+.product-title{font-size:0.98rem;margin:0 0 6px;font-weight:600;color:#1f2937}
+.product-price{color:var(--accent);font-weight:700;margin-bottom:0.5rem}
+.product-desc{flex:1;color:var(--muted);font-size:0.92rem;margin-bottom:0.6rem;min-height:48px}
+.product-actions{display:flex;gap:0.5rem;align-items:center}
+.add-to-cart-btn{background:linear-gradient(90deg,var(--accent),#ff914d);color:#fff;border:none;padding:0.45rem 0.8rem;border-radius:999px}
+.buy-now{background:#25D366;color:#fff;padding:0.45rem 0.8rem;border-radius:999px;text-decoration:none}
+.site-footer-inner{background:#fff;border-top:1px solid #e6e6e6;padding:1rem;margin-top:2rem;text-align:center}
+.page-loader{position:fixed;inset:0;background:rgba(255,255,255,0.85);display:flex;align-items:center;justify-content:center;font-weight:600;z-index:9999}
+.hidden{display:none}
+
+@media (max-width:640px){.main-nav a{display:inline-block;margin-left:0.5rem}.product-image,.product-img{height:160px}}
+
+/* Sticky navbar visual tweaks */
+.sticky-top{position:sticky;top:0;z-index:1050}
+.navbar.sticky-top{background:#fff!important;border-bottom:1px solid rgba(0,0,0,0.04);box-shadow:0 4px 18px rgba(12,20,50,0.06);position:fixed;width:100%;top:0}
+.navbar .navbar-brand{font-weight:700}
